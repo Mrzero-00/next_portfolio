@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styled, {css, keyframes} from "styled-components";
+import SideGnb from './SideGnb';
 
 const fadein = keyframes`
     from{
@@ -17,7 +18,16 @@ const OutLine = styled.div`
   position:relative;
   justify-content: center;
   align-items:center;
-
+  transition:300ms;
+  ${props=>props.pageNum===1 && css`
+        background-color: #f1f1f1;
+    `}
+    ${props=>props.pageNum===2 && css`
+        background-color: #a5a5a5;
+    `}
+    ${props=>props.pageNum===3 && css`
+        background-color:#f15ae1;
+    `}
 `
 
 const TitleDiv = styled.h2`
@@ -29,19 +39,19 @@ const TitleDiv = styled.h2`
 
 const InlineContents = styled.div`
     padding:1rem;
-    color:#000;
-    font-size:3rem;
-    animation-duration : 1000ms;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation-duration : 300ms;
     animation-timing-function: ease-out;
     animation-name:${fadein};
     animation-fill-mode:forwards;
-    ${props=>props.visible && css`
-        display: none;
-    `}
 `
-function InnerPage({children,visible,title}){
+function InnerPage({children,visible,title,pageNum,setSelectPage}){
     return(
-        <OutLine>
+        <OutLine pageNum={pageNum}>
             <TitleDiv>{title}</TitleDiv>
             <InlineContents visible={!visible}>
                 {children}

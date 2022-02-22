@@ -3,10 +3,10 @@ import InnerPage from './InnerPage';
 
 
 
-function Contact({pageNum}){
-    const mount = pageNum===3;
+function Contact({pageNum,setSelectPage}){
+    const mount = pageNum===4;
     return(
-        <InnerPage visible={mount}  title="연락">
+        <InnerPage visible={mount} pageNum={4} setSelectPage={setSelectPage}  title="연락">
             <div>연락</div>
         </InnerPage>
     )

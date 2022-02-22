@@ -11,6 +11,15 @@ const StyledTypist =styled(Typist)`
     font-weight:bold;
 `;
 
+const IntroPage = styled.div`
+    padding:1rem;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+`
+
 const upDown = keyframes`
     from{
         transform: translate(-50%,0px);
@@ -37,16 +46,19 @@ const UnderIcon = styled.div`
     animation-timing-function: ease-out;
     animation-name:${upDown};
     animation-iteration-count:infinite;
-
-`
+    `
 function Intro({pageNum}){
     const mount = pageNum===0;
+
     return(
-        <InnerPage visible={mount}>
-            <StyledTypist sentences={['포기를 모르는', '오뚜기 같은 개발자', '손상일입니다.']} loop={false} />
+        <IntroPage visible={mount} pageNum={0}>
+            <StyledTypist
+                showCursor={false}
+                typingSpeed={50}
+                sentences={['포기를 모르는', '오뚜기 같은 개발자', '손상일입니다.']} loop={false} />
             <UnderText>더보러 가기</UnderText>
             <UnderIcon><IoMdArrowDropdown/></UnderIcon>
-        </InnerPage>
+        </IntroPage>
     )
 }
 
