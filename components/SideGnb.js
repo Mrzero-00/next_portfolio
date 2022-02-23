@@ -14,6 +14,10 @@ const SideGnbBar = styled.div`
     ${props=>!props.gnbState&&css`
         transform:translateX(100px);
     `}
+
+    @media only screen and (max-width: 768px) {
+        display:none;
+    }
 `
 
 const SideGnbStateBtn =styled.div`
@@ -72,7 +76,7 @@ function SideGnb ({setSelectPage,pageNum}) {
                 onMouseEnter={()=>{setGnbBtnHover(true)}}
                 onMouseLeave={()=>{setGnbBtnHover(false)}}
                 onClick={()=>{setGnbState(pre=>!pre)}}>
-                    {gnbState?<RiArrowRightSFill/>:<RiArrowLeftSFill/>}</SideGnbStateBtn>
+                    {gnbState?<RiArrowRightSFill size={36}/>:<RiArrowLeftSFill size={36}/>}</SideGnbStateBtn>
             <SideGnbBox>
                 <SideGnbBtn 
                     setState={pageNum===1} 

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import styled, {css, keyframes} from "styled-components";
-import SideGnb from './SideGnb';
 
 const fadein = keyframes`
     from{
@@ -32,9 +31,17 @@ const OutLine = styled.div`
 
 const TitleDiv = styled.h2`
     position:absolute;
-    left:1rem;
+    left:0px;
     top:1rem;
     font-size:2rem;
+    background-color:#fff;
+    color:#000;
+    padding:10px 20px;
+    border-radius:0px 10px 10px 0px;
+    box-shadow:0px 2px 2px 2px rgba(0,0,0,0.3);
+    @media only screen and (max-width: 768px) {
+            font-size: 1rem;
+    }
 `
 
 const InlineContents = styled.div`

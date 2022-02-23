@@ -9,6 +9,9 @@ const StyledTypist =styled(Typist)`
     font-size: 4rem;
     color: #323232;
     font-weight:bold;
+    @media only screen and (max-width: 768px) {
+        font-size: 2rem;
+  }
 `;
 
 const IntroPage = styled.div`
@@ -35,6 +38,9 @@ const UnderText = styled.div`
     bottom:60px;
     left: 50%;
     transform: translateX(-50%);
+    @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 `
 
 const UnderIcon = styled.div`
@@ -57,7 +63,7 @@ function Intro({pageNum}){
                 typingSpeed={50}
                 sentences={['포기를 모르는', '오뚜기 같은 개발자', '손상일입니다.']} loop={false} />
             <UnderText>더보러 가기</UnderText>
-            <UnderIcon><IoMdArrowDropdown/></UnderIcon>
+            <UnderIcon><IoMdArrowDropdown size={36}/></UnderIcon>
         </IntroPage>
     )
 }
