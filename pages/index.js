@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPageScroller from 'react-page-scroller';
 import Contact from "../components/Contact";
-import HeaderData from "../components/Headerdata";
+import HeaderData from "../components/HeaderData";
 import Intro from "../components/Intro";
 import Introduce from "../components/Introduce";
 import Project from "../components/Project";
