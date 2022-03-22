@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPageScroller from 'react-page-scroller';
-import { createFalse } from "typescript";
 import Contact from "../components/contact";
 import HeaderData from "../components/headerdata";
 import Intro from "../components/intro";
