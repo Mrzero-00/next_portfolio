@@ -4,7 +4,8 @@ import styled , {css} from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-// import {AiOutlineLink,AiOutlineGithub} from 'react-icons/Ai';
+import github_icon from '../public/img/github_icon.png';
+import site_icon from '../public/img/site_icon.png';
 
 import img_92per1 from '../public/img/92per1.png';
 import img_92per2 from '../public/img/92per2.png';
@@ -39,6 +40,16 @@ const ProjectCard = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+`
+
+const Icons = styled.div`
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-position: center;
+    ${props=>props.img&&css`
+        background-image: url(${props.img});
+    `}
 `
 
 const ProjectCardImgBox = styled.div`
@@ -128,8 +139,8 @@ const ProjectRender =({item})=>{
             </ProjectCardContents>
             <ProjectCardTitle>아카이브</ProjectCardTitle>
             <ProjectCardContents>
-                {/* {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
-                    <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)} */}
+                {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><Icons img={github_icon}/></a>:
+                    <a href={item.url} target="blank"><Icons img={site_icon}/></a>)}
             </ProjectCardContents>
         </div>
     </ProjectCard>
