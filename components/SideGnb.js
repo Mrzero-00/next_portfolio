@@ -1,6 +1,6 @@
 import styled, {css, keyframes} from "styled-components";
 import React, { useState } from 'react';
-// import {RiArrowLeftSFill,RiArrowRightSFill} from 'react-icons/Ri';
+import arrow_icon from '../public/img/arrow_icon.png';
 
 const SideGnbBar = styled.div`
     position:fixed;
@@ -18,6 +18,20 @@ const SideGnbBar = styled.div`
     @media only screen and (max-width: 768px) {
         display:none;
     }
+`
+
+const Icons = styled.div`
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    ${props=>props.img&&css`
+        background-image: url(${props.img});
+    `}
+    ${props=>props.state&&css`
+        transform: rotate(180deg);
+    `}
 `
 
 const SideGnbStateBtn =styled.div`
@@ -71,12 +85,12 @@ function SideGnb ({setSelectPage,pageNum}) {
     const [gnbBtnHover,setGnbBtnHover] =useState(false);
     return (
         <SideGnbBar gnbState={gnbState}>
-            {/* <SideGnbStateBtn
+            <SideGnbStateBtn
                 gnbBtnHover={gnbBtnHover}
                 onMouseEnter={()=>{setGnbBtnHover(true)}}
                 onMouseLeave={()=>{setGnbBtnHover(false)}}
                 onClick={()=>{setGnbState(pre=>!pre)}}>
-                    {gnbState?<RiArrowRightSFill size={36}/>:<RiArrowLeftSFill size={36}/>}</SideGnbStateBtn> */}
+                    {gnbState?<Icons img={arrow_icon}></Icons>:<Icons state={true} img={arrow_icon}></Icons>}</SideGnbStateBtn>
             <SideGnbBox>
                 <SideGnbBtn 
                     setState={pageNum===1} 

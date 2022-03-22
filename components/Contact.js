@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
-// import {ImMobile} from 'react-icons/im';
-// import {MdMail} from "react-icons/md";
-// import {BsGithub} from 'react-icons/bs';
+import styled,{css}from 'styled-components';
+import mail_icon from '../public/img/mail_icon.png';
+import github_icon from '../public/img/github_icon.png';
 
 const Footer = styled.div`
     position:fixed;
@@ -29,18 +28,26 @@ const Footer = styled.div`
         align-items:center;
     }
 `
-
+const Icons = styled.div`
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-position: center;
+    ${props=>props.img&&css`
+        background-image: url(${props.img});
+    `}
+`
 
 function Contact(){
     return(
         <Footer>
             <div className="footerBox">
-                <a className="github" href="">
-                    {/* <BsGithub size={28}/> */}
+                <a className="github" target="blank" href="">
+                    <Icons img={github_icon}></Icons>
                 </a>
                 <a className="blog" href=""></a>
                 <a className="mail" href="mailto:mrzero885@gmail.com">
-                    {/* <MdMail size={28}/> */}
+                    <Icons img={mail_icon}></Icons>
                 </a>
             </div>
         </Footer>

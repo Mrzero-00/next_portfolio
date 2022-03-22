@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import InnerPage from './InnerPage';
 import Typist from 'react-text-typist';
 import styled,{keyframes,css} from 'styled-components';
-// import {BsFillPersonFill} from 'react-icons/bs';
-// import {FaBirthdayCake} from 'react-icons/fa';
-// import {ImMobile} from 'react-icons/im';
-// import {MdMail,MdWork} from "react-icons/md";
-// import {GrCertificate} from 'react-icons/gr';
+import person_icon from '../public/img/person_icon.png';
+import mail_icon from '../public/img/mail_icon.png';
+import phone_icon from '../public/img/phone_icon.png';
+import certificate_icon from '../public/img/certificate_icon.png';
+import career_icon from '../public/img/career_icon.png';
 const fadeUpIn = keyframes`
     from{
         opacity:0;
@@ -15,6 +15,16 @@ const fadeUpIn = keyframes`
         opacity:1;
         transform:translateY(0px);       
     }
+`
+
+const Icons = styled.div`
+    width: 48px;
+    height: 48px;
+    background-size: contain;
+    background-position: center;
+    ${props=>props.img&&css`
+        background-image: url(${props.img});
+    `}
 `
 
 const StyledTypist =styled(Typist)`
@@ -59,11 +69,12 @@ const IntroInnerInfoItem = styled.div`
     .infoTitle{
         min-width:50px ;
         width:20%;
-        height:36px;
+        height:48px;
         display:flex;
+        font-weight: bold;
         align-items:center;
         font-size:1.25rem;
-        margin-left:8px;
+        margin-left:16px;
         @media only screen and (max-width: 768px) {
 
             margin-left:0px;
@@ -73,6 +84,7 @@ const IntroInnerInfoItem = styled.div`
     }
 
     .infoValue{
+        min-height: 48px;
         font-size:1.25rem;
         color:#555;
         line-height:2rem;
@@ -107,27 +119,27 @@ function Introduce({pageNum,setSelectPage,setBlockState}){
                     sentences={['사용자 관점에서 서비스를 만드는 개발자가 되자!']} loop={false} />}
                     {mountState&&<IntroInnerInfo>
                         <IntroInnerInfoItem>
-                            {/* <BsFillPersonFill size={36}/> */}
+                            <Icons img={person_icon}></Icons>
                             <div className="infoTitle">이름</div>
                             <div className="infoValue">손상일</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            {/* <ImMobile size={36}/> */}
+                            <Icons img={phone_icon}></Icons>
                             <div className="infoTitle">연락처</div>
                             <div className="infoValue">010-8237-1502</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            {/* <MdMail size={36}/> */}
+                            <Icons img={mail_icon}></Icons>
                             <div className="infoTitle">메일</div>
                             <a className="infoValue" href="mailto:mrzero885@gmail.com">mrzero885@gmail.com</a>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            {/* <GrCertificate size={36}/> */}
+                            <Icons img={certificate_icon}></Icons>
                             <div className="infoTitle">자격증</div>
                             <div className="infoValue">정보처리기사</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            {/* <MdWork size={36}/> */}
+                            <Icons img={career_icon}></Icons>
                             <div className="infoTitle">경력</div>
                             <div className="infoValue">
                                 1년 6개월
