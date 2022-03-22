@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import InnerPage from './InnerPage';
+import InnerPage from './innerPage';
 import Typist from 'react-text-typist';
 import styled,{keyframes} from 'styled-components';
 import {IoMdArrowDropdown} from 'react-icons/io';

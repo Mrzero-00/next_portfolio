@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import InnerPage from './InnerPage';
+import InnerPage from './innerPage';
 import styled , {css} from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
@@ -32,23 +32,24 @@ import reduxIcon from '../public/img/redux.png';
 const ProjectCard = styled.div`
     height: 100%;
     padding:2rem;
-    max-width: 460px;
     margin: 0 auto ;
     background-color: #fff ;
     border-radius: 20px ;
     margin-left: 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `
 
 const ProjectCardImgBox = styled.div`
-    width:100%;
-    height: 230px;
+    width:40%;
+    height: 100%;
     position:relative;
-    margin-bottom: 32px ;
 `
 
 const ProjectCardImg = styled.div`
     width:100%;
-    height: 230px;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -92,7 +93,6 @@ const ProjectCardTech=styled.div`
 const ProjectInner = styled.div`
     width:100%;
     height:100%;
-    position: relative;
     padding:8rem 7rem 8rem 8rem;
     @media only screen and (max-width: 768px) {
         padding:7rem 1rem;
@@ -101,8 +101,8 @@ const ProjectInner = styled.div`
 
 const ProjectRender =({item})=>{
     const [imgNum, setImgNum] = useState(0);
-    console.log(item);
     return(
+        <>
     <ProjectCard>
         <ProjectCardImgBox>
             <Slider 
@@ -115,20 +115,25 @@ const ProjectRender =({item})=>{
             {item.img.map((item,index)=>(<ProjectCardImg img={item} key={index}/>))}
             </Slider>
         </ProjectCardImgBox>
-        <ProjectCardTitle>프로젝트명</ProjectCardTitle>
-        <ProjectCardContents>{item.name}</ProjectCardContents>
-        <ProjectCardTitle>프로젝트 역할</ProjectCardTitle>
-        <ProjectCardContents>{item.roll}</ProjectCardContents>
-        <ProjectCardTitle>기술 스택</ProjectCardTitle>
-        <ProjectCardContents>
-            {item.techStack.map((item,index)=>(<ProjectCardTech img={item} key={index}/>))}
-        </ProjectCardContents>
-        <ProjectCardTitle>아카이브</ProjectCardTitle>
-        <ProjectCardContents>
-            {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
-                <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)}
-        </ProjectCardContents>
+        <div style={{width:"100%",marginLeft:"30px",display:"flex",flexDirection:"column"}}>
+            <ProjectCardTitle>프로젝트명</ProjectCardTitle>
+            <ProjectCardContents>{item.name}</ProjectCardContents>
+            <ProjectCardTitle>프로젝트 설명</ProjectCardTitle>
+            <ProjectCardContents>{item.description}</ProjectCardContents>
+            <ProjectCardTitle>프로젝트 역할</ProjectCardTitle>
+            <ProjectCardContents>{item.roll}</ProjectCardContents>
+            <ProjectCardTitle>기술 스택</ProjectCardTitle>
+            <ProjectCardContents>
+                {item.techStack.map((item,index)=>(<ProjectCardTech img={item} key={index}/>))}
+            </ProjectCardContents>
+            <ProjectCardTitle>아카이브</ProjectCardTitle>
+            <ProjectCardContents>
+                {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
+                    <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)}
+            </ProjectCardContents>
+        </div>
     </ProjectCard>
+    </>
     )
 }
 
@@ -145,6 +150,7 @@ function Project({pageNum,setSelectPage}){
             id:1,
             name:"92PER",
             roll:"프론트엔드",
+            description:"편집자가 없는 유튜버에게 간편하게 썸네일을 제작 할 수 있도록 현존하는 썸네일을 데이터화 하여 테두리, 글씨넣기, 이모티콘 등을 손쉽게 편집하고 이미지로 출력하는 서비스",
             img:[img_92per1,img_92per2,img_92per3],
             techStack:[reactIcon,reduxIcon],
             archive:[]
@@ -153,6 +159,7 @@ function Project({pageNum,setSelectPage}){
             id:2,
             name:"프로브잇",
             roll:"프론트엔드",
+            description:"서비스 제작자에게 서비스 홍보 및 서비스 피드백을 통해 개선점을 찾고, 사용자는 서비스 초기 제작부터 피드백을 통해 자신이 사용하기 좀더 편안한 서비스를 함께 만들어 나가는 경험을 부여하는 서비스",
             img:[img_proveit1,img_proveit2],
             techStack:[reactIcon],
             archive:[
@@ -173,6 +180,7 @@ function Project({pageNum,setSelectPage}){
             name:"뉴블로",
             roll:"풀스택",
             img:[img_newblo1,img_newblo2,img_newblo3],
+            description:"기존의 블로그 서비스와 다른 수익구조를 통해 블로거에게는 수익을, 블로그 독자에게는 가독성을 증진 시켜 줄 수 있는 서비스",
             techStack:[reactIcon,nextjsIcon,nodejsIcon],
             archive:[
                 {
@@ -191,6 +199,7 @@ function Project({pageNum,setSelectPage}){
             id:4,
             name:"2022 대선 리서치",
             roll:"프론트엔드",
+            description:"외주 업무로, 10가지의 질문에 대한 대선후보자들의 답변을 고르고 최후 자신에게 가장 알맞는 정책을 펼친 후보를 알려주는 서비스",
             img:[img_search1,img_search2],
             techStack:[reactIcon],
             archive:[
@@ -218,8 +227,9 @@ function Project({pageNum,setSelectPage}){
                     dots={true}
                     infinite={true}
                     speed={500}
-                    slidesToShow={innerWidth>=1100?2:1}
-                    slidesToScroll={innerWidth>=1100?2:1}
+                    slidesToShow={1}
+                    slidesToScroll={1}
+                    style={{innerHeight:"100%"}}
                 >
                     {projectList.map((item)=><ProjectRender item={item} key={item.id}/>)}
                 </Slider>

@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactPageScroller from 'react-page-scroller';
 import { createFalse } from "typescript";
-import Contact from "../components/Contact";
-import HeaderData from "../components/HeaderData";
-import Intro from "../components/Intro";
-import Introduce from "../components/Introduce";
-import Project from "../components/Project";
-import SideGnb from "../components/SideGnb";
-import Skills from "../components/Skills";
-import Study from "../components/Study";
+import Contact from "../components/contact";
+import HeaderData from "../components/headerdata";
+import Intro from "../components/intro";
+import Introduce from "../components/introduce";
+import Project from "../components/project";
+import SideGnb from "../components/sideGnb";
+import Skills from "../components/skills";
+import Study from "../components/study";
 
 function Home() {
   const [pageNum,setPageNum] = useState(0);

@@ -39,3 +39,27 @@ a {
   font-family: "Pretendard";
   font-weight: 300;
 }
+
+.slick-slider {
+  height: 100% !important;
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
+.slick-track {
+  height: 100% !important;
+}
+
+.slick-cloned > div:first-child {
+  height: 100% !important;
+}
+
+.slick-active > div:first-child {
+  height: 100% !important;
+}
+
+.slick-slider > div {
+  height: 100% !important;
+}

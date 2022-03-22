@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InnerPage from './InnerPage';
+import InnerPage from './innerPage';
 import styled,{css,keyframes} from 'styled-components';
 
 function Study({pageNum,setSelectPage}){

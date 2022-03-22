@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InnerPage from './InnerPage';
+import InnerPage from './innerPage';
 import Typist from 'react-text-typist';
 import styled,{keyframes,css} from 'styled-components';
 import {BsFillPersonFill} from 'react-icons/bs';
