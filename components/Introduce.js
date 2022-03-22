@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import InnerPage from './InnerPage';
 import Typist from 'react-text-typist';
 import styled,{keyframes,css} from 'styled-components';
-import {BsFillPersonFill} from 'react-icons/bs';
-import {FaBirthdayCake} from 'react-icons/fa';
-import {ImMobile} from 'react-icons/im';
-import {MdMail,MdWork} from "react-icons/md";
-import {GrCertificate} from 'react-icons/gr';
+// import {BsFillPersonFill} from 'react-icons/bs';
+// import {FaBirthdayCake} from 'react-icons/fa';
+// import {ImMobile} from 'react-icons/im';
+// import {MdMail,MdWork} from "react-icons/md";
+// import {GrCertificate} from 'react-icons/gr';
 const fadeUpIn = keyframes`
     from{
         opacity:0;
@@ -107,27 +107,27 @@ function Introduce({pageNum,setSelectPage,setBlockState}){
                     sentences={['사용자 관점에서 서비스를 만드는 개발자가 되자!']} loop={false} />}
                     {mountState&&<IntroInnerInfo>
                         <IntroInnerInfoItem>
-                            <BsFillPersonFill size={36}/>
+                            {/* <BsFillPersonFill size={36}/> */}
                             <div className="infoTitle">이름</div>
                             <div className="infoValue">손상일</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            <ImMobile size={36}/>
+                            {/* <ImMobile size={36}/> */}
                             <div className="infoTitle">연락처</div>
                             <div className="infoValue">010-8237-1502</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            <MdMail size={36}/>
+                            {/* <MdMail size={36}/> */}
                             <div className="infoTitle">메일</div>
                             <a className="infoValue" href="mailto:mrzero885@gmail.com">mrzero885@gmail.com</a>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            <GrCertificate size={36}/>
+                            {/* <GrCertificate size={36}/> */}
                             <div className="infoTitle">자격증</div>
                             <div className="infoValue">정보처리기사</div>
                         </IntroInnerInfoItem>
                         <IntroInnerInfoItem>
-                            <MdWork size={36}/>
+                            {/* <MdWork size={36}/> */}
                             <div className="infoTitle">경력</div>
                             <div className="infoValue">
                                 1년 6개월

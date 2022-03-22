@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import InnerPage from './InnerPage';
 import Typist from 'react-text-typist';
 import styled,{keyframes} from 'styled-components';
-import {IoMdArrowDropdown} from 'react-icons/io';
+// import {IoMdArrowDropdown} from 'react-icons/io';
 
 
 const StyledTypist =styled(Typist)`
@@ -63,7 +63,7 @@ function Intro({pageNum}){
                 typingSpeed={50}
                 sentences={['포기를 모르는', '오뚜기 같은 개발자', '손상일입니다.']} loop={false} />
             <UnderText>더보러 가기</UnderText>
-            <UnderIcon><IoMdArrowDropdown size={36}/></UnderIcon>
+            {/* <UnderIcon><IoMdArrowDropdown size={36}/></UnderIcon> */}
         </IntroPage>
     )
 }

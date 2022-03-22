@@ -71,12 +71,12 @@ function SideGnb ({setSelectPage,pageNum}) {
     const [gnbBtnHover,setGnbBtnHover] =useState(false);
     return (
         <SideGnbBar gnbState={gnbState}>
-            <SideGnbStateBtn
+            {/* <SideGnbStateBtn
                 gnbBtnHover={gnbBtnHover}
                 onMouseEnter={()=>{setGnbBtnHover(true)}}
                 onMouseLeave={()=>{setGnbBtnHover(false)}}
                 onClick={()=>{setGnbState(pre=>!pre)}}>
-                    {gnbState?<RiArrowRightSFill size={36}/>:<RiArrowLeftSFill size={36}/>}</SideGnbStateBtn>
+                    {gnbState?<RiArrowRightSFill size={36}/>:<RiArrowLeftSFill size={36}/>}</SideGnbStateBtn> */}
             <SideGnbBox>
                 <SideGnbBtn 
                     setState={pageNum===1} 

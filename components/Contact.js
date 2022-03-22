@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import {ImMobile} from 'react-icons/im';
-import {MdMail} from "react-icons/md";
-import {BsGithub} from 'react-icons/bs';
+// import {ImMobile} from 'react-icons/im';
+// import {MdMail} from "react-icons/md";
+// import {BsGithub} from 'react-icons/bs';
 
 const Footer = styled.div`
     position:fixed;
@@ -36,11 +36,11 @@ function Contact(){
         <Footer>
             <div className="footerBox">
                 <a className="github" href="">
-                    <BsGithub size={28}/>
+                    {/* <BsGithub size={28}/> */}
                 </a>
                 <a className="blog" href=""></a>
                 <a className="mail" href="mailto:mrzero885@gmail.com">
-                    <MdMail size={28}/>
+                    {/* <MdMail size={28}/> */}
                 </a>
             </div>
         </Footer>
