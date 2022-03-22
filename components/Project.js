@@ -125,8 +125,8 @@ const ProjectRender =({item})=>{
         </ProjectCardContents>
         <ProjectCardTitle>아카이브</ProjectCardTitle>
         <ProjectCardContents>
-            {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url}><AiOutlineGithub size={48}></AiOutlineGithub></a>:
-                <a href={item.url}><AiOutlineLink size={48}></AiOutlineLink></a>)}
+            {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
+                <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)}
         </ProjectCardContents>
     </ProjectCard>
     )
@@ -159,12 +159,12 @@ function Project({pageNum,setSelectPage}){
                 {
                     id:0,
                     kind:"git",
-                    url:""
+                    url:"https://github.com/Mrzero-00/proveit"
                 },
                 {
                     id:0,
                     kind:"site",
-                    url:""
+                    url:"https://proveitf.netlify.app"
                 },
             ]
         },
@@ -178,12 +178,12 @@ function Project({pageNum,setSelectPage}){
                 {
                     id:0,
                     kind:"git",
-                    url:""
+                    url:"https://github.com/Mrzero-00/newblo"
                 },
                 {
                     id:0,
                     kind:"site",
-                    url:""
+                    url:"https://newblo.netlify.app"
                 },
             ]
         },
@@ -197,12 +197,12 @@ function Project({pageNum,setSelectPage}){
                 {
                     id:0,
                     kind:"git",
-                    url:""
+                    url:"https://github.com/Mrzero-00/startupResearch"
                 },
                 {
                     id:0,
                     kind:"site",
-                    url:""
+                    url:"http://election2022.sbiz.news/"
                 },
             ]
         }
