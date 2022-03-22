@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import InnerPage from './innerPage';
+import InnerPage from './InnerPage';
 import styled,{css,keyframes} from 'styled-components';
 import htmlIcon from '../public/img/html.png';
 import cssIcon from '../public/img/css.png';

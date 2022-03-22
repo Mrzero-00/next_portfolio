@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import InnerPage from './innerPage';
+import InnerPage from './InnerPage';
 import styled , {css} from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
