@@ -4,7 +4,7 @@ import styled , {css} from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import {AiOutlineLink,AiOutlineGithub} from 'react-icons/Ai';
+// import {AiOutlineLink,AiOutlineGithub} from 'react-icons/Ai';
 
 import img_92per1 from '../public/img/92per1.png';
 import img_92per2 from '../public/img/92per2.png';
@@ -128,8 +128,8 @@ const ProjectRender =({item})=>{
             </ProjectCardContents>
             <ProjectCardTitle>아카이브</ProjectCardTitle>
             <ProjectCardContents>
-                {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
-                    <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)}
+                {/* {item.archive.length>=1&&item.archive.map((item)=>item.kind=="git"?<a href={item.url} target="blank"><AiOutlineGithub size={48}></AiOutlineGithub></a>:
+                    <a href={item.url} target="blank"><AiOutlineLink size={48}></AiOutlineLink></a>)} */}
             </ProjectCardContents>
         </div>
     </ProjectCard>

@@ -1,6 +1,6 @@
 import styled, {css, keyframes} from "styled-components";
 import React, { useState } from 'react';
-import {RiArrowLeftSFill,RiArrowRightSFill} from 'react-icons/Ri';
+// import {RiArrowLeftSFill,RiArrowRightSFill} from 'react-icons/Ri';
 
 const SideGnbBar = styled.div`
     position:fixed;
