@@ -42,10 +42,9 @@ function Contact(){
     return(
         <Footer>
             <div className="footerBox">
-                <a className="github" target="blank" href="">
+                <a className="github" target="blank" href="https://github.com/Mrzero-00">
                     <Icons img={github_icon}></Icons>
                 </a>
-                <a className="blog" href=""></a>
                 <a className="mail" href="mailto:mrzero885@gmail.com">
                     <Icons img={mail_icon}></Icons>
                 </a>

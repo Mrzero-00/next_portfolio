@@ -69,24 +69,23 @@ const ProjectCardImg = styled.div`
     `}
 `
 
-const ProjectCardTitle = styled.div`
-    font-size: 1.25rem ;
+const ProjectCardTitle = styled.span`
+    font-size: 1rem ;
     font-weight: bold ;
-    padding: 0.5rem 1rem;
-    display:inline-block ;
+    padding: 0.2rem 0.5rem;
+    display:inline-block;
     background-color: #f1f1f1 ;
     margin-top: 8px ;
     border-radius: 8px ;
 `
 
 const ProjectCardContents = styled.div`
-    font-size: 1rem ;
-    min-height: 48px;
+    font-size: 0.8rem ;
     font-weight: bold;
     margin-top: 8px ;
+    margin-bottom: 8px ;
     padding-left: 8px;
     display: flex;
-    align-items: center;
 
 `
 
@@ -126,7 +125,7 @@ const ProjectRender =({item})=>{
             {item.img.map((item,index)=>(<ProjectCardImg img={item} key={index}/>))}
             </Slider>
         </ProjectCardImgBox>
-        <div style={{width:"100%",marginLeft:"30px",display:"flex",flexDirection:"column"}}>
+        <div style={{width:"100%",height:"100%",marginLeft:"30px",display:"flex",flexDirection:"column"}}>
             <ProjectCardTitle>프로젝트명</ProjectCardTitle>
             <ProjectCardContents>{item.name}</ProjectCardContents>
             <ProjectCardTitle>프로젝트 설명</ProjectCardTitle>
