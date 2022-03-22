@@ -29,7 +29,7 @@ const StyledTypist =styled(Typist)`
 const IntroInner = styled.div`
     width:100%;
     height:100%;
-    padding:10rem;
+    padding:8rem 7rem 8rem 8rem;
     @media only screen and (max-width: 768px) {
         padding:7rem 1rem;
   }
@@ -57,6 +57,7 @@ const IntroInnerInfoItem = styled.div`
            flex-direction:column;
         }
     .infoTitle{
+        min-width:50px ;
         width:20%;
         height:36px;
         display:flex;

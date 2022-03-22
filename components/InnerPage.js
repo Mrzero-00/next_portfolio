@@ -18,15 +18,7 @@ const OutLine = styled.div`
   justify-content: center;
   align-items:center;
   transition:300ms;
-  ${props=>props.pageNum===1 && css`
-        background-color: #f1f1f1;
-    `}
-    ${props=>props.pageNum===2 && css`
-        background-color: #a5a5a5;
-    `}
-    ${props=>props.pageNum===3 && css`
-        background-color:#f15ae1;
-    `}
+  background-color: #f1f1f1;
 `
 
 const TitleDiv = styled.h2`
@@ -45,6 +37,7 @@ const TitleDiv = styled.h2`
 `
 
 const InlineContents = styled.div`
+position:relative;
     padding:1rem;
     width:100%;
     height:100%;

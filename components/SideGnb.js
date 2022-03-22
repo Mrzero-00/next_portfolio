@@ -8,7 +8,7 @@ const SideGnbBar = styled.div`
     align-items:center;
     height:100vh;
     width:130px;
-    top:0px;
+    bottom:56px;
     right:0px;
     transition:300ms;
     ${props=>!props.gnbState&&css`
@@ -99,13 +99,13 @@ function SideGnb ({setSelectPage,pageNum}) {
                     onMouseEnter={()=>{setHover(3)}}
                     onMouseLeave={()=>{setHover(0)}}
                 >프로젝트</SideGnbBtn>
-                <SideGnbBtn 
+                {/* <SideGnbBtn 
                     setState={pageNum===4} 
                     setHover={hover===4}
                     onClick={()=>{setSelectPage(4)}}
                     onMouseEnter={()=>{setHover(4)}}
                     onMouseLeave={()=>{setHover(0)}}
-                >연락</SideGnbBtn>
+                >스터디</SideGnbBtn> */}
             </SideGnbBox>
         </SideGnbBar>
     );
