@@ -171,8 +171,8 @@ function Skills({pageNum,setSelectPage}){
             text:"React를 활용하며, Inline Style CSS 를 자주 사용하는 안좋은 습관을 고치기 위하여 처음에 학습을 결정하고 시작하였으며, 이후 props를 통해 css를 통제 할 수 있는 점에서 매력을 느껴 지속적으로 학습중임."
         },
         {
-            skillLevel:40,
-            text:"차후 협업 및 오류를 최소화 하기 위하여 학습중에 있으며, 인터페이스 등을 활용하여 props를 지정하는 부분 까지는 습득하였으나, 원할한 사용은 추가적인 학습이 필요함"
+            skillLevel:50,
+            text:"기본적인 사용인 제너릭 및 타입 어노테이션, 함수 오버로드 등을 학습하였다. 추가적으로 react와 함께 사용하는 것을 학습 할 예정임."
         },
         {
             skillLevel:40,
